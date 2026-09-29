@@ -21,7 +21,7 @@ Open `index.html` in a browser. The site uses plain HTML, CSS and JavaScript and
 - Photo assets are needed to populate the gallery.
 - Verified English translations and review of Kannada names and book descriptions.
 - Actual book-cover images, current prices, availability, shipping terms and payment method.
-- Membership fees and terms, donation instructions, and current confirmation of any 80G tax relief.
+- Membership fees and terms, donation instructions, and current payment options.
 - A form service or backend if enquiries should be submitted directly on the site instead of through the visitor's email app.
 
 Catalogue covers are generated typographic placeholders, not scans of published book covers. Programme descriptions are based on the supplied commemorative text and should be checked for current availability before publication.

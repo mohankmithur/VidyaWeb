@@ -121,6 +121,9 @@ const coverColors = ["#476c58", "#9d543e", "#4c6172", "#a17c40", "#655c78", "#52
 const bookGrid = document.querySelector("#book-grid");
 const cart = new Map();
 let language = "kn";
+try {
+  language = localStorage.getItem("site-language") === "en" ? "en" : "kn";
+} catch {}
 
 function renderBooks() {
   const searchInput = document.querySelector("#book-search");
@@ -167,10 +170,17 @@ function renderCart() {
 
 function setLanguage(nextLanguage) {
   language = nextLanguage;
+  try {
+    localStorage.setItem("site-language", language);
+  } catch {}
   document.documentElement.lang = language;
   document.body.classList.toggle("kn", language === "kn");
   document.querySelectorAll("[data-en][data-kn]").forEach(element => {
-    element.textContent = element.dataset[language];
+    if (element.hasAttribute("data-html")) {
+      element.innerHTML = element.dataset[language];
+    } else {
+      element.textContent = element.dataset[language].replace(/^\d{2} \/ /, "");
+    }
   });
   document.querySelectorAll("[data-placeholder-en][data-placeholder-kn]").forEach(element => {
     element.placeholder = element.dataset[`placeholder${language === "en" ? "En" : "Kn"}`];
@@ -330,6 +340,16 @@ if (navigation && !navigation.querySelector('[data-page="news-events"]')) {
   navigation.insertBefore(newsLink, document.querySelector("#language-switch"));
 }
 
+if (navigation && !navigation.querySelector('[data-page="vidya-kuteera"]')) {
+  const kuteeraLink = document.createElement("a");
+  kuteeraLink.href = "vidya-kuteera.html";
+  kuteeraLink.dataset.page = "vidya-kuteera";
+  kuteeraLink.dataset.en = "Vidya Kuteera";
+  kuteeraLink.dataset.kn = "ವಿದ್ಯಾಕುಟೀರ";
+  kuteeraLink.textContent = "Vidya Kuteera";
+  navigation.insertBefore(kuteeraLink, document.querySelector("#language-switch"));
+}
+
 document.querySelectorAll(".brand-mark").forEach(brandMark => {
   const logo = document.createElement("img");
   logo.src = "Contents/images/samprathishtaana.jpg";
@@ -425,4 +445,20 @@ if (menuToggle && navigation) {
 
 const currentYearNode = document.querySelector("#current-year");
 if (currentYearNode) currentYearNode.textContent = new Date().getFullYear();
-setLanguage("kn");
+const programmeFundNames = new Map([
+  ["ಮಿತ್ತೂರು ಸುವಿದ್ಯಾನಿಧಿ · ಸಂಸ್ಕೃತ ಪ್ರತಿಭಾಪುರಸ್ಕಾರ", "Mitturu Suvidya Nidhi · Sanskrit Talent Awards"],
+  ["ಸಾಂಗವೇದಪೋಷಣ ನಿಧಿ · ಕರ್ಮಕಾಂಡ ನಿಧಿ · ಪ್ರವಚನ ನಿಧಿ", "Sangaveda Poshana Nidhi · Karmakanda Nidhi · Pravachana Nidhi"],
+  ["ಮಿತ್ತೂರು ಸ್ವಾಸ್ಥ್ಯನಿಧಿ · ಸಂಪ್ರದಾನ ನಿಧಿ", "Mitturu Svasthya Nidhi · Sampradana Nidhi"],
+  ["ಗ್ರಂಥಪ್ರಕಾಶನ ನಿಧಿ · ಸಂಪರ್ಕ ಗ್ರಂಥಾಲಯ", "Granthaprakashana Nidhi · Reference Library"],
+  ["ಅತಿಥಿಸತ್ಕಾರ ನಿಧಿ · ಮೂಲಸೌಕರ್ಯ ಅಭಿವೃದ್ಧಿ ನಿಧಿ", "Atithisatkara Nidhi · Infrastructure Development Fund"]
+]);
+document.querySelectorAll(".programme-kannada").forEach(element => {
+  const kannada = element.textContent.trim();
+  const english = programmeFundNames.get(kannada);
+  if (english) {
+    element.dataset.en = english;
+    element.dataset.kn = kannada;
+  }
+});
+document.querySelectorAll(".giving-note, .programme-footnote, .work-section > .section-deck").forEach(element => element.remove());
+setLanguage(language);
