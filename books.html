@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="kn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse the published books and titles associated with the Mitturu Samprathishtaana.">
+  <title>Books | Mitturu Samprathishtaana</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Serif+Kannada:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="content-pages.css">
+  <script src="app.js" defer></script>
+</head>
+<body data-page="books">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Mitturu Samprathishtaana home">
+      <span class="brand-mark" aria-hidden="true">ವಿ</span>
+      <span class="brand-copy"><strong data-en="MITTURU SAMPRATHISHTAANA" data-kn="ಮಿತ್ತೂರು ಸಂಪ್ರತಿಷ್ಠಾನ">MITTURU SAMPRATHISHTAANA</strong><small data-en="Learning · Service · Living heritage" data-kn="ವಿದ್ಯೆ · ಸೇವೆ · ಜೀವಂತ ಪರಂಪರೆ">Learning · Service · Living heritage</small></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu"><span></span><span></span></button>
+    <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
+      <a href="index.html" data-page="home" data-en="Home" data-kn="ಮುಖಪುಟ">Home</a>
+      <a href="about.html" data-page="about" data-en="About" data-kn="ನಮ್ಮ ಬಗ್ಗೆ">About</a>
+      <a href="programmes.html" data-page="programmes" data-en="Programmes" data-kn="ಕಾರ್ಯಕ್ರಮಗಳು">Programmes</a>
+      <a href="books.html" data-page="books" data-en="Books" data-kn="ಗ್ರಂಥಗಳು">Books</a>
+      <a href="support.html" data-page="support" data-en="Support" data-kn="ಸಹಕರಿಸಿ">Support</a>
+      <a href="contact.html" data-page="contact" data-en="Contact" data-kn="ಸಂಪರ್ಕ">Contact</a>
+      <button class="language-switch" id="language-switch" type="button" aria-label="Switch language"><span>ಕನ್ನಡ</span><span class="language-divider">/</span><span>EN</span></button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <p class="eyebrow" data-en="04 / Publications" data-kn="04 / ಗ್ರಂಥಪ್ರಕಾಶನ">04 / Publications</p>
+        <h1 data-en="A library of living knowledge." data-kn="ಜೀವಂತ ಜ್ಞಾನದ ಗ್ರಂಥಭಂಡಾರ.">A library of living knowledge.</h1>
+      </div>
+    </section>
+
+    <section class="section books-section">
+      <div class="section books-inner">
+        <div class="section-heading books-heading">
+          <div>
+            <p class="eyebrow" data-en="Published titles" data-kn="ಪ್ರಕಟಿತ ಶೀರ್ಷಿಕೆಗಳು">Published titles</p>
+            <h2 data-en="A growing body of study and practice." data-kn="ಅಧ್ಯಯನ ಮತ್ತು ಅಭ್ಯಾಸದ ಬೆಳೆಯುತ್ತಿರುವ ಶ್ರೇಣಿ.">A growing body of study and practice.</h2>
+          </div>
+          <p class="section-deck" data-en="Browse the published works linked to the Samprathishtaana. The books remain available as meaningful study resources." data-kn="ಸಂಪ್ರತಿಷ್ಠಾನಕ್ಕೆ ಸಂಬಂಧಿಸಿದ ಪ್ರಕಟಿತ ಗ್ರಂಥಗಳನ್ನು ವೀಕ್ಷಿಸಿ. ಈ ಪುಸ್ತಕಗಳು ಅಧ್ಯಯನ ಮತ್ತು ಉಲ್ಲೇಖಕ್ಕೆ ಲಭ್ಯವಿವೆ.">Browse the published works linked to the Samprathishtaana. The books remain available as meaningful study resources.</p>
+        </div>
+        <div class="catalogue-tools"><label class="search-box"><span class="search-icon" aria-hidden="true">⌕</span><input id="book-search" type="search" placeholder="Search titles or subjects" aria-label="Search publications" data-placeholder-en="Search titles or subjects" data-placeholder-kn="ಶೀರ್ಷಿಕೆ ಅಥವಾ ವಿಷಯ ಹುಡುಕಿ"></label><label class="filter-label"><span class="sr-only" data-en="Filter by category" data-kn="ವರ್ಗದ ಪ್ರಕಾರ ವಿಂಗಡಿಸಿ">Filter by category</span><select id="book-filter" aria-label="Filter by category"><option value="all" data-en="All subjects" data-kn="ಎಲ್ಲ ವಿಷಯಗಳು">All subjects</option><option value="ritual" data-en="Vedic & ritual" data-kn="ವೈದಿಕ ಮತ್ತು ಕರ್ಮಕಾಂಡ">Vedic & ritual</option><option value="sanskrit" data-en="Sanskrit & scholarship" data-kn="ಸಂಸ್ಕೃತ ಮತ್ತು ಶಾಸ್ತ್ರ">Sanskrit & scholarship</option><option value="puranic" data-en="Puranic & devotional" data-kn="ಪುರಾಣ ಮತ್ತು ಭಕ್ತಿ">Puranic & devotional</option><option value="culture" data-en="Culture & biography" data-kn="ಸಂಸ್ಕೃತಿ ಮತ್ತು ಜೀವನಚರಿತ್ರೆ">Culture & biography</option><option value="yoga" data-en="Yoga & wellbeing" data-kn="ಯೋಗ ಮತ್ತು ಆರೋಗ್ಯ">Yoga & wellbeing</option></select></label><span class="catalogue-count" id="catalogue-count">53 titles</span></div>
+        <div id="book-grid" class="book-grid" aria-live="polite"></div>
+        <div class="catalogue-note"><span data-en="The books are available as published works for study and reference." data-kn="ಈ ಗ್ರಂಥಗಳು ಅಧ್ಯಯನ ಮತ್ತು ಉಲ್ಲೇಖಕ್ಕಾಗಿ ಪ್ರಕಟಿತ ಪುಸ್ತಕಗಳ ರೂಪದಲ್ಲಿ ಲಭ್ಯವಿವೆ.">The books are available as published works for study and reference.</span><a href="contact.html" data-en="Ask about ordering" data-kn="ಖರೀದಿ ವಿಚಾರಿಸಿ">Ask about ordering <span aria-hidden="true">→</span></a></div>
+      </div>
+    </section>
+
+    <section class="order-section" id="order">
+      <div class="section order-inner">
+        <div class="order-copy">
+          <p class="eyebrow" data-en="Publication enquiry" data-kn="ಗ್ರಂಥ ವಿಚಾರಣೆ">Publication enquiry</p>
+          <h2 data-en="Choose a title. We’ll help with the rest." data-kn="ಗ್ರಂಥವನ್ನು ಆಯ್ಕೆಮಾಡಿ. ಮುಂದಿನ ಮಾಹಿತಿಗೆ ನಾವು ಸಹಕರಿಸುತ್ತೇವೆ.">Choose a title. We’ll help with the rest.</h2>
+          <p data-en="Add titles from the catalogue, then send an enquiry with your contact details. The office can confirm price, stock, postage and payment options." data-kn="ಗ್ರಂಥಪಟ್ಟಿಯಿಂದ ಶೀರ್ಷಿಕೆಗಳನ್ನು ಆಯ್ಕೆಮಾಡಿ, ನಿಮ್ಮ ಸಂಪರ್ಕ ವಿವರಗಳೊಂದಿಗೆ ವಿಚಾರಣೆ ಕಳುಹಿಸಿ. ಬೆಲೆ, ಲಭ್ಯತೆ, ಅಂಚೆ ಮತ್ತು ಪಾವತಿ ವಿವರಗಳನ್ನು ಕಚೇರಿ ತಿಳಿಸುತ್ತದೆ.">Add titles from the catalogue, then send an enquiry with your contact details. The office can confirm price, stock, postage and payment options.</p>
+          <div class="order-selection"><h3 data-en="Your selected titles" data-kn="ನೀವು ಆಯ್ಕೆಮಾಡಿದ ಗ್ರಂಥಗಳು">Your selected titles</h3><div id="cart-items" class="cart-items"><p class="empty-cart" data-en="No titles selected yet." data-kn="ಇನ್ನೂ ಯಾವುದೇ ಗ್ರಂಥ ಆಯ್ಕೆಮಾಡಿಲ್ಲ.">No titles selected yet.</p></div></div>
+        </div>
+        <form id="order-form" class="order-form">
+          <div class="form-row">
+            <label><span data-en="Your name" data-kn="ನಿಮ್ಮ ಹೆಸರು">Your name</span><input name="name" autocomplete="name" required></label>
+            <label><span data-en="Email address" data-kn="ಇಮೇಲ್ ವಿಳಾಸ">Email address</span><input name="email" type="email" autocomplete="email"></label>
+          </div>
+          <label><span data-en="Mobile number (required)" data-kn="ಮೊಬೈಲ್ ಸಂಖ್ಯೆ (ಕಡ್ಡಾಯ)">Mobile number (required)</span><input name="mobile" type="tel" autocomplete="tel" required></label>
+          <label><span data-en="Delivery location / message" data-kn="ವಿಳಾಸ / ಸಂದೇಶ">Delivery location / message</span><textarea name="message" rows="3"></textarea></label>
+          <div class="donation-actions">
+            <button class="button button-dark" type="submit"><span data-en="Send enquiry by email" data-kn="ಇಮೇಲ್ ಮೂಲಕ ವಿಚಾರಣೆ ಕಳುಹಿಸಿ">Send enquiry by email</span><span aria-hidden="true">↗</span></button>
+            <button class="button button-dark" id="whatsapp-order" type="button"><span data-en="Send enquiry via WhatsApp" data-kn="ವಾಟ್ಸ್ಅಪ್ ಮೂಲಕ ವಿಚಾರಣೆ ಕಳುಹಿಸಿ">Send enquiry via WhatsApp</span><span aria-hidden="true">↗</span></button>
+          </div>
+          <p class="form-note" data-en="Email is optional; a mobile number is required. This site collects no payment." data-kn="ಇಮೇಲ್ ಐಚ್ಛಿಕ; ಮೊಬೈಲ್ ಸಂಖ್ಯೆ ಕಡ್ಡಾಯ. ಈ ತಾಣದಲ್ಲಿ ಪಾವತಿ ಸ್ವೀಕರಿಸುವುದಿಲ್ಲ.">Email is optional; a mobile number is required. This site collects no payment.</p>
+          <p class="form-status" id="order-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">ವಿ</span><span class="brand-copy"><strong>MITTURU SAMPRATHISHTAANA</strong><small data-en="Vidya Kuteera · Kabaka" data-kn="ವಿದ್ಯಾಕುಟೀರ · ಕಬಕ">Vidya Kuteera · Kabaka</small></span></a>
+      <p data-en="Learning · Service · Living heritage" data-kn="ವಿದ್ಯೆ · ಸೇವೆ · ಜೀವಂತ ಪರಂಪರೆ">Learning · Service · Living heritage</p>
+      <a href="#main" class="back-top" aria-label="Back to top">↑</a>
+    </div>
+    <div class="footer-bottom"><span>© <span id="current-year"></span> <span data-en="Mitturu Samprathishtaana (R)" data-kn="ಮಿತ್ತೂರು ಸಂಪ್ರತಿಷ್ಠಾನ (ರಿ)">Mitturu Samprathishtaana (R)</span></span></div>
+  </footer>
+</body>
+</html>

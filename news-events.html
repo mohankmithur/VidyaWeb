@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="kn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="News, events and dated updates from Mitturu Samprathishtaana.">
+  <title>News and Events | Mitturu Samprathishtaana</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Serif+Kannada:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="content-pages.css">
+  <script src="app.js" defer></script>
+</head>
+<body data-page="news-events">
+  <a class="skip-link" href="#main" data-en="Skip to content" data-kn="ವಿಷಯಕ್ಕೆ ತೆರಳಿ">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Mitturu Samprathishtaana home">
+      <span class="brand-mark" aria-hidden="true">ವಿ</span>
+      <span class="brand-copy"><strong data-en="MITTURU SAMPRATHISHTAANA" data-kn="ಮಿತ್ತೂರು ಸಂಪ್ರತಿಷ್ಠಾನ">MITTURU SAMPRATHISHTAANA</strong><small data-en="Learning · Service · Living heritage" data-kn="ವಿದ್ಯೆ · ಸೇವೆ · ಜೀವಂತ ಪರಂಪರೆ">Learning · Service · Living heritage</small></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu"><span></span><span></span></button>
+    <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
+      <a href="index.html" data-page="home" data-en="Home" data-kn="ಮುಖಪುಟ">Home</a>
+      <a href="about.html" data-page="about" data-en="About" data-kn="ನಮ್ಮ ಬಗ್ಗೆ">About</a>
+      <a href="programmes.html" data-page="programmes" data-en="Programmes" data-kn="ಕಾರ್ಯಕ್ರಮಗಳು">Programmes</a>
+      <a href="books.html" data-page="books" data-en="Books" data-kn="ಗ್ರಂಥಗಳು">Books</a>
+      <a href="support.html" data-page="support" data-en="Support" data-kn="ಸಹಕರಿಸಿ">Support</a>
+      <a href="contact.html" data-page="contact" data-en="Contact" data-kn="ಸಂಪರ್ಕ">Contact</a>
+      <button class="language-switch" id="language-switch" type="button" aria-label="Switch language"><span>ಕನ್ನಡ</span><span class="language-divider">/</span><span>EN</span></button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <p class="eyebrow" data-en="A dated record of our work" data-kn="ನಮ್ಮ ಕಾರ್ಯಗಳ ಕಾಲಾನುಕ್ರಮ ದಾಖಲೆ">A dated record of our work</p>
+        <h1 data-en="News and events" data-kn="ಸುದ್ದಿ ಮತ್ತು ಕಾರ್ಯಕ್ರಮಗಳು">News and events</h1>
+      </div>
+    </section>
+
+    <section class="section page-panel">
+      <div class="section-heading">
+        <p class="eyebrow" data-en="Updates from the Samprathishtaana" data-kn="ಸಂಪ್ರತಿಷ್ಠಾನದ ಸುದ್ದಿಗಳು">Updates from the Samprathishtaana</p>
+        <h2 data-en="Notes, announcements and gatherings." data-kn="ಸುದ್ದಿ, ಪ್ರಕಟಣೆ ಮತ್ತು ಸಮಾಗಮಗಳು.">Notes, announcements and gatherings.</h2>
+      </div>
+      <p class="section-deck" data-en="News and event posts are arranged by date. Entries can include a written update, event details and photographs." data-kn="ಸುದ್ದಿ ಮತ್ತು ಕಾರ್ಯಕ್ರಮಗಳ ಬರಹಗಳು ದಿನಾಂಕಾನುಸಾರ ಇಲ್ಲಿ ಕಾಣಿಸಿಕೊಳ್ಳುತ್ತವೆ. ಪ್ರಕಟಣೆಗಳಲ್ಲಿ ಬರಹ, ಕಾರ್ಯಕ್ರಮದ ವಿವರಗಳು ಮತ್ತು ಛಾಯಾಚಿತ್ರಗಳನ್ನು ಸೇರಿಸಬಹುದು.">News and event posts are arranged by date. Entries can include a written update, event details and photographs.</p>
+
+      <div class="catalogue-tools" id="news-filters" hidden>
+        <label class="filter-label"><span data-en="Year" data-kn="ವರ್ಷ">Year</span><select id="news-year" aria-label="Filter news by year"><option value="all" data-en="All years" data-kn="ಎಲ್ಲ ವರ್ಷಗಳು">All years</option></select></label>
+        <label class="filter-label"><span data-en="Month" data-kn="ತಿಂಗಳು">Month</span><select id="news-month" aria-label="Filter news by month"><option value="all" data-en="All months" data-kn="ಎಲ್ಲ ತಿಂಗಳುಗಳು">All months</option></select></label>
+      </div>
+      <div id="news-archive" class="news-archive" aria-live="polite">
+        <p class="section-deck" id="news-empty" data-en="News and event updates will appear here when published." data-kn="ಸುದ್ದಿ ಮತ್ತು ಕಾರ್ಯಕ್ರಮಗಳ ಪ್ರಕಟಣೆಗಳನ್ನು ಇಲ್ಲಿ ಹಂಚಿಕೊಳ್ಳಲಾಗುವುದು.">News and event updates will appear here when published.</p>
+        <p class="section-deck" id="news-no-results" hidden data-en="No posts match the selected date." data-kn="ಆಯ್ಕೆ ಮಾಡಿದ ದಿನಾಂಕಕ್ಕೆ ಹೊಂದುವ ಪ್ರಕಟಣೆಗಳಿಲ್ಲ.">No posts match the selected date.</p>
+      </div>
+      <div class="catalogue-note">
+        <span data-en="Browse photographs from the Samprathishtaana’s activities." data-kn="ಸಂಪ್ರತಿಷ್ಠಾನದ ಚಟುವಟಿಕೆಗಳ ಛಾಯಾಚಿತ್ರಗಳನ್ನು ವೀಕ್ಷಿಸಿ.">Browse photographs from the Samprathishtaana’s activities.</span>
+        <a class="button-link" href="gallery.html" data-en="Open photo gallery" data-kn="ಛಾಯಾಚಿತ್ರ ಗ್ಯಾಲರಿ ತೆರೆಯಿರಿ">Open photo gallery <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">ವಿ</span><span class="brand-copy"><strong>MITTURU SAMPRATHISHTAANA</strong><small data-en="Vidya Kuteera · Kabaka" data-kn="ವಿದ್ಯಾಕುಟೀರ · ಕಬಕ">Vidya Kuteera · Kabaka</small></span></a>
+      <p data-en="Learning · Service · Living heritage" data-kn="ವಿದ್ಯೆ · ಸೇವೆ · ಜೀವಂತ ಪರಂಪರೆ">Learning · Service · Living heritage</p>
+      <a href="#main" class="back-top" aria-label="Back to top">↑</a>
+    </div>
+    <div class="footer-bottom"><span>© <span id="current-year"></span> <span data-en="Mitturu Samprathishtaana (R)" data-kn="ಮಿತ್ತೂರು ಸಂಪ್ರತಿಷ್ಠಾನ (ರಿ)">Mitturu Samprathishtaana (R)</span></span></div>
+  </footer>
+</body>
+</html>
